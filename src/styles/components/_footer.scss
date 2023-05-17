@@ -1,0 +1,74 @@
+.footer {
+  font-size: $xxs-font;
+  &__top {
+    @include flexStartCenter;
+    @include bodyPadding;
+    @include lg {
+      flex-direction: column-reverse;
+      gap: $sm-font;
+      width: 100%;
+    }
+    padding-bottom: $xl-font;
+    .top-left {
+      max-width: 280px;
+      color: $primary-color;
+
+      img {
+        width: 250px;
+        height: 60px;
+        margin-bottom: $md-font;
+        @include lg {
+          width: 200px;
+        }
+      }
+      p {
+        font-size: 0.75rem;
+        line-height: $sm-font;
+        @include lg {
+          margin-bottom: $md-font;
+        }
+      }
+    }
+    .top-right {
+      @include flexStartCenter;
+
+      width: 50%;
+      @include lg {
+        width: 100%;
+        padding-right: $md-font;
+        padding-top: $lg-font;
+      }
+      .footerLinks {
+        @include flexStartCenter;
+        flex-direction: column;
+        h1 {
+          font-size: $sm-font;
+          color: $primary-color;
+          margin-bottom: $sm-font;
+        }
+        a {
+          text-transform: capitalize;
+          color: #1b1c1d;
+          font-weight: 400;
+          margin-bottom: $sm-font;
+          font-size: 0.75rem;
+          transform: all 0.5s;
+          &:hover {
+            color: $lighter-gray;
+          }
+        }
+      }
+    }
+  }
+  &__btm {
+    border-top: 1px solid $color-border;
+    @include bodyPadding;
+    margin-bottom: $md-font;
+    color: #1b1c1d;
+    font-weight: 500;
+    @include lg {
+      padding-top: $lg-font;
+      padding-bottom: $xs-font;
+    }
+  }
+}

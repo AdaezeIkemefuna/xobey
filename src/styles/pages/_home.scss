@@ -1,0 +1,185 @@
+.trusted {
+  @include bodyPadding;
+  background-color: #ffffff8e;
+  &__heading {
+    font-size: $extra-font;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+  }
+  &__flexbox {
+    @include flexSpaceCenter;
+    @include md {
+      flex-direction: column;
+      gap: $lg-font;
+    }
+    & > * {
+      width: 47%;
+      @include md {
+        width: 100%;
+      }
+    }
+    .row {
+      @include flexSpaceCenter;
+      flex-wrap: wrap;
+      img {
+        width: 150px;
+        height: 60px;
+        @include sm {
+          width: 90px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.events {
+  @include bodyPadding;
+  margin-top: $xxl-font;
+  background-color: #fcfcfc;
+  background-image: url(../../assets/pattern-side-nav.png);
+  background-position: center;
+  background-repeat: repeat;
+  object-fit: contain;
+  text-align: center;
+  padding-bottom: 9rem;
+  @include lg {
+    background-image: url(../../assets/pattern-stripes.svg);
+  }
+  &__subTitle {
+    font-size: $md-font;
+    font-weight: 400;
+    margin-top: 5rem;
+    color: $lighter-gray;
+    @include lg {
+      margin-top: 3rem;
+    }
+    @include sm {
+      margin-top: 2rem;
+      font-size: $sm-font;
+    }
+  }
+  &__heading {
+    font-size: $xl-font;
+    color: $primary-color;
+    font-weight: 700;
+    margin-bottom: $lg-font;
+    @include sm {
+      font-size: $lg-font;
+    }
+  }
+
+  &__gallery {
+    width: 87%;
+    margin: 0 auto;
+    @include xl {
+      width: 100%;
+    }
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: $md-font;
+      margin-bottom: $md-font;
+      @include lg {
+        flex-direction: column;
+        gap: $md-font;
+      }
+      .service {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        border-radius: 15px;
+        padding: $xl-font $lg-font 0;
+        text-align: left;
+        height: 400px;
+        overflow: hidden;
+        @include lg {
+          width: 100%;
+          align-items: center;
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 2rem;
+          margin-bottom: $sm-font;
+          max-width: 368px;
+        }
+        p {
+          font-size: 0.9;
+          line-height: 1.5rem;
+          max-width: 368px;
+        }
+        img {
+          height: 145px;
+          width: auto;
+          object-fit: contain;
+          align-self: center;
+          margin-top: $lg-font;
+        }
+      }
+      .service.analytics {
+        background-color: rgb(237, 255, 245);
+        h3 {
+          color: rgb(12, 135, 32);
+        }
+      }
+      .service.virtual {
+        background-color: rgb(201, 233, 253);
+        h3 {
+          color: rgb(2, 62, 79);
+        }
+        img {
+          margin-bottom: -2.6rem;
+          @include sm {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    &--btm {
+      background-color: rgb(255, 240, 220);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-radius: 15px;
+      padding: $xl-font 6rem 0;
+      text-align: left;
+      min-height: 350px;
+      .btm-left {
+        @include md {
+          text-align: left;
+        }
+      }
+      & > * {
+        width: 50%;
+        @include md {
+          width: 100%;
+        }
+      }
+      @include md {
+        flex-direction: column;
+        gap: $lg-font;
+        padding: 2rem 2rem 0;
+      }
+      h3 {
+        color: rgb(240, 136, 0);
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: $sm-font;
+      }
+      p {
+        font-size: 0.9;
+        line-height: 1.5rem;
+        max-width: 368px;
+        margin-bottom: $md-font;
+      }
+      img {
+        width: 348px;
+        height: 308px;
+        object-fit: contain;
+        margin-top: -8px;
+      }
+    }
+  }
+}

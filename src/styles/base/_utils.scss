@@ -1,0 +1,38 @@
+.btn {
+  outline: none;
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  color: black;
+  text-transform: capitalize;
+  border-radius: 27px;
+  width: 14em;
+  height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-weight: 500;
+  font-size: $sm-font;
+  cursor: pointer;
+  @include sm {
+    font-size: $xs-font;
+  }
+  &::before {
+    content: "";
+    width: 0;
+    height: 3em;
+    border-radius: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $primary-color;
+    transition: 0.2s ease;
+    display: block;
+    z-index: -1;
+  }
+  &:hover {
+    color: $white-color;
+  }
+  &:hover::before {
+    width: 14em;
+  }
+}

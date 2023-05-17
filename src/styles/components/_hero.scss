@@ -1,0 +1,98 @@
+.hero {
+  height: 83vh;
+  background-color: $color-bg;
+  position: relative;
+
+  width: 100%;
+  @include sm {
+    height: 70vh;
+  }
+  &__overlay {
+    position: absolute;
+    height: 3%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 100;
+    background-image: linear-gradient(180deg, transparent, #fff);
+  }
+  &__center {
+    @include bodyPadding;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+
+    &--left {
+      h1 {
+        margin-top: $lg-font;
+        font-size: 3.2rem;
+        color: $primary-color;
+        line-height: 3.2rem;
+        font-weight: 700;
+        position: relative;
+        @include sm {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+      }
+      .svg-stroke {
+        width: 288px;
+        position: absolute;
+        top: 94%;
+        right: 6%;
+        @include sm {
+          width: 150px;
+          right: 3%;
+        }
+      }
+      p {
+        margin: $xl-font 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        @include sm {
+          font-size: $xs-font;
+          margin-top: $xl-font;
+        }
+      }
+    }
+    &--right {
+      width: 50%;
+      overflow: hidden;
+      height: 100%;
+      @include md {
+        display: none;
+      }
+      .scroller {
+        @include flexCenter;
+        gap: 40px;
+        animation: heroAnimate 50s linear 2s infinite forwards;
+      }
+      .box1 {
+        @include flexCenter;
+        flex-direction: column;
+        gap: 2rem;
+        .empty-span {
+          height: 192px;
+          width: 12rem;
+        }
+      }
+      img {
+        height: 384px;
+        width: 12vw;
+        object-fit: cover;
+        border-radius: 100px;
+      }
+    }
+  }
+}
+
+@keyframes heroAnimate {
+  0% {
+    margin-top: -1450px;
+  }
+  100% {
+    margin-top: -300px;
+  }
+}

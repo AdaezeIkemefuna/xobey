@@ -1,0 +1,65 @@
+//font variables
+$xxl-font: 4rem;
+$xl-font: 3rem;
+$lg-font: 2.25rem;
+$md-font: 1.5rem;
+$sm-font: 1rem;
+$xs-font: 0.88rem;
+$xxs-font: 0.81rem;
+$extra-font: 1.25rem;
+
+//color variables
+$primary-color: #023e4f;
+$secondary-color: #01789a;
+$color-bg: #f6fbfd;
+$color-border: #dfe1e6;
+$warning-color: #e97316;
+$error-color: #ef444a;
+$success-color: #22c55e;
+$white-color: #ffffff;
+$black-color: #2a2e3f;
+$light-dark: #858484;
+$feint-light-dark: #414243;
+$lighter-gray: #828282;
+
+$fira-sans-font: "Fira Sans", sans-serif;
+
+//color maps
+$colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "warning": $warning-color,
+  "error": $error-color,
+  "success": $success-color,
+  "white": $white-color,
+  "black": $black-color,
+);
+
+@each $key, $val in $colors {
+  .sb-text-#{$key} {
+    color: $val;
+  }
+
+  .sb-bg-#{$key} {
+    background-color: $val;
+  }
+
+  //all color variations
+  @for $i from 1 through 10 {
+    .sb-text-#{$key}-light-#{$i} {
+      color: mix(#ffffff, $val, $i * 10);
+    }
+    .sb-bg-#{$key}-light-#{$i} {
+      background-color: mix(#ffffff, $val, $i * 10);
+    }
+  }
+
+  @for $i from 1 through 10 {
+    .sb-text-#{$key}-dark-#{$i} {
+      color: mix(#000000, $val, $i * 10);
+    }
+    .sb-bg-#{$key}-dark-#{$i} {
+      background-color: mix(#000000, $val, $i * 10);
+    }
+  }
+}

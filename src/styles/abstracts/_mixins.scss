@@ -1,0 +1,59 @@
+@mixin navigationLinks {
+  font-size: $sm-font;
+  color: $lighter-gray;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexSpaceCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexStartCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@mixin subtitles {
+  color: $primary-color;
+  font-weight: 600;
+  font-family: $fira-sans-font;
+  font-size: 2.25rem;
+}
+
+@mixin containerPadding {
+  padding: 1rem 5rem;
+
+  @include sm {
+    padding: 2rem;
+  }
+}
+@mixin bodyPadding {
+  padding: $xl-font 12rem 0 12rem;
+  height: 100%;
+  @include xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include sm {
+    padding: 1rem;
+  }
+}
+@mixin footerPadding {
+  padding: 1rem 5rem;
+
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+  }
+}

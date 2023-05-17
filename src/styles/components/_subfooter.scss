@@ -1,0 +1,158 @@
+.subfooter {
+  text-align: center;
+  &__top {
+    background-color: #f1f1f1;
+    @include bodyPadding;
+    padding-top: 7rem;
+    .options {
+      @include flexCenter;
+      gap: $lg-font;
+      padding-bottom: 6rem;
+      @include sm {
+        flex-direction: column;
+        width: 100%;
+      }
+      a {
+        padding: $lg-font;
+        min-height: 200px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        color: $white-color;
+        position: relative;
+        overflow: hidden;
+        .img-holder {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: url(../../assets/gettyimages-1187652065_slide-fef17c844ea0fc3fb5341d6c86636bfc85304671-s1100-c50.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: all 0.5s;
+        }
+        h1 {
+          z-index: 999;
+          font-size: 2rem;
+          @include flexCenter;
+          gap: $sm-font;
+          transition: all 0.2s ease;
+          text-align: left;
+        }
+        p {
+          z-index: 999;
+          font-size: $xs-font;
+          text-align: left;
+        }
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          background-color: rgba(black, 0.5);
+          z-index: 1;
+        }
+        &:hover {
+          h1 {
+            gap: $md-font;
+          }
+          .img-holder {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  &__subTitle {
+    font-size: $md-font;
+    font-weight: 400;
+    color: $lighter-gray;
+    @include lg {
+      margin-top: 3rem;
+    }
+    @include sm {
+      margin-top: 2rem;
+      font-size: $sm-font;
+    }
+  }
+  &__heading {
+    font-size: $xl-font;
+    color: $primary-color;
+    font-weight: 700;
+    padding-bottom: 5rem;
+    @include sm {
+      font-size: $md-font;
+    }
+  }
+  &__btm {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $md-font;
+    max-height: 502px;
+    @include lg {
+      flex-direction: column;
+      max-height: none;
+    }
+    @include bodyPadding;
+    padding-top: 5rem;
+    @include xl {
+      padding: 4rem 4rem 0;
+    }
+    @include md {
+      padding: 3rem 2rem 0;
+    }
+
+    .btm-left {
+      max-width: 420px;
+      text-align: left;
+      h3 {
+        color: $white-color;
+        font-weight: 600;
+        font-size: $xl-font;
+        line-height: 2.9rem;
+        margin-bottom: $sm-font;
+        @include lg {
+          font-size: $lg-font;
+        }
+      }
+      p {
+        font-size: 0.9;
+        line-height: 1.5rem;
+        margin-bottom: $md-font;
+        @include lg {
+          font-size: $xs-font;
+        }
+      }
+      .download {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+          height: 72px;
+          width: 150px;
+        }
+      }
+    }
+    .btm-right {
+      .ticket__container {
+        overflow: hidden;
+
+        img {
+          overflow: hidden;
+          width: 422px;
+          @include lg {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
