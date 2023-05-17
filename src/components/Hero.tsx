@@ -2,22 +2,32 @@ import stroke from "../assets/stroke.svg";
 import pic1 from "../assets/gettyimages-1187652065_slide-fef17c844ea0fc3fb5341d6c86636bfc85304671-s1100-c50.jpg";
 import pic2 from "../assets/istockphoto-974238866-612x612.jpg";
 import pic3 from "../assets/01.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Hero = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="hero">
       <div className="hero__overlay"></div>
       <div className="hero__center">
-        <aside className="hero__center--left">
+        <aside className="hero__center--left" data-aos="fade-right">
           <h1>
-            Experience <br /> Virtual Events <br /> Like Never Before.
-            <aside className="svg-stroke">
-              <img src={stroke} alt="stroke" />
+            <aside className="text-typed">
+              Experience <br />
+              Virtual Events <br />
+              Like Never Before.
+              <aside className="svg-stroke">
+                <img src={stroke} alt="stroke" />
+              </aside>
             </aside>
           </h1>
 
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut <br />{" "}
-            porta in in mauris molestie turpis.
+            porta in mauris molestie turpis.
           </p>
 
           <button className="btn">come into the arenas</button>

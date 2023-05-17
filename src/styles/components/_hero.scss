@@ -5,7 +5,7 @@
 
   width: 100%;
   @include sm {
-    height: 70vh;
+    height: 83vh;
   }
   &__overlay {
     position: absolute;
@@ -26,6 +26,7 @@
 
     &--left {
       h1 {
+        display: inline-block;
         margin-top: $lg-font;
         font-size: 3.2rem;
         color: $primary-color;
@@ -36,11 +37,20 @@
           font-size: 2rem;
           line-height: 2.5rem;
         }
+        .text-typed {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 0;
+          animation: typing;
+          animation-duration: 1.5s;
+          animation-timing-function: steps(60, end);
+          animation-fill-mode: forwards;
+        }
       }
       .svg-stroke {
         width: 288px;
         position: absolute;
-        top: 94%;
+        top: 95%;
         right: 6%;
         @include sm {
           width: 150px;
@@ -85,6 +95,15 @@
         border-radius: 100px;
       }
     }
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
 

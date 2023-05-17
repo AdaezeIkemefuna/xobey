@@ -4,10 +4,16 @@ import blueafric from "../assets/logo-blue-afric.svg";
 import yebox from "../assets/logo-yebox.svg";
 import blueprint from "../assets/logo-blue-print.svg";
 import sme from "../assets/logo-enugu-sme.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Trusted() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className="trusted">
+    <section className="trusted" data-aos="fade-left">
       <h5 className="trusted__heading">Trusted By</h5>
       <aside className="trusted__flexbox">
         <div className="row">
