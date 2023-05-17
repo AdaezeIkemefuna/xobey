@@ -2,18 +2,16 @@ import stroke from "../assets/stroke.svg";
 import pic1 from "../assets/gettyimages-1187652065_slide-fef17c844ea0fc3fb5341d6c86636bfc85304671-s1100-c50.jpg";
 import pic2 from "../assets/istockphoto-974238866-612x612.jpg";
 import pic3 from "../assets/01.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
+
+
+
 const Hero = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+
   return (
     <section className="hero">
       <div className="hero__overlay"></div>
       <div className="hero__center">
-        <aside className="hero__center--left" data-aos="fade-right">
+        <aside className="hero__center--left" >
           <h1>
             <aside className="text-typed">
               Experience <br />
